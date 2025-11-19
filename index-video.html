@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Amy Phan West for Congress CA-45. Vietnamese refugee, Westminster City Councilwoman, small business owner. From fleeing communism to fighting for the American Dream.">
+    <meta name="keywords" content="Amy Phan West, CA-45, Congress, Vietnamese American, Westminster, Orange County, Derek Tran">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Amy Phan West for Congress CA-45">
+    <meta property="og:description" content="From refugee to fighter: Defending the American Dream">
+    <meta property="og:image" content="/assets/og-image.jpg">
+    <meta property="og:url" content="https://amyphanwest.com">
+
+    <title>Amy Phan West for Congress | CA-45 | Defending the American Dream</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/favicon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- Mautic Tracking Script -->
+    <script>
+      (function(w,d,t,u,n,a,m){w['MauticTrackingObject']=n;
+        w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)},a=d.createElement(t),
+        m=d.getElementsByTagName(t)[0];a.async=1;a.src=u;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://eblastem.com/mtc.js','mt');
+
+      mt('send', 'pageview', {
+        page_title: 'Homepage',
+        tags: ['website_visitor', 'homepage']
+      });
+    </script>
+
+    <!-- Video Background Styles -->
+    <style>
+        .video-bg-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .video-bg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 180%;
+            height: 180%;
+            transform: translate(-50%, -50%);
+            filter: blur(8px) brightness(0.7) contrast(1.1);
+            pointer-events: none;
+        }
+
+        .video-gradient-overlay {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 70% 50%,
+                    rgba(56, 87, 166, 0.3) 0%,
+                    transparent 60%),
+                radial-gradient(ellipse at 30% 50%,
+                    rgba(200, 16, 46, 0.25) 0%,
+                    transparent 60%),
+                linear-gradient(180deg,
+                    rgba(0, 0, 0, 0.2) 0%,
+                    rgba(0, 0, 0, 0.1) 50%,
+                    rgba(0, 0, 0, 0.3) 100%);
+            z-index: 1;
+        }
+
+        .hero {
+            position: relative;
+        }
+
+        .hero-container {
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <!-- Donation Banner (initially hidden above viewport) -->
+    <div id="donationBanner" class="donation-banner">
+        <!-- Close button -->
+        <button
+            id="bannerCloseBtn"
+            class="banner-close-btn"
+            aria-label="Close banner"
+        >
+            ×
+        </button>
+
+        <!-- Banner content -->
+        <div class="banner-content">
+            <h2 class="banner-heading">
+                Help Flip CA-45
+            </h2>
+            <p class="banner-subtext">
+                Every contribution counts. Quick donate:
+            </p>
+
+            <!-- Donation buttons -->
+            <div class="donation-buttons">
+                <a href="https://secure.anedot.com/phan-west-for-congress/7a2ad324-a724-4885-9b8d-a718a9fdc806?amount=25"
+                   class="donation-btn donation-btn-white"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    $25
+                </a>
+                <a href="https://secure.anedot.com/phan-west-for-congress/7a2ad324-a724-4885-9b8d-a718a9fdc806?amount=50"
+                   class="donation-btn donation-btn-white"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    $50
+                </a>
+                <a href="https://secure.anedot.com/phan-west-for-congress/7a2ad324-a724-4885-9b8d-a718a9fdc806?amount=100"
+                   class="donation-btn donation-btn-white"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    $100
+                </a>
+                <a href="https://secure.anedot.com/phan-west-for-congress/7a2ad324-a724-4885-9b8d-a718a9fdc806?amount=250"
+                   class="donation-btn donation-btn-white"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    $250
+                </a>
+                <a href="https://secure.anedot.com/phan-west-for-congress/7a2ad324-a724-4885-9b8d-a718a9fdc806?amount=500"
+                   class="donation-btn donation-btn-white"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    $500
+                </a>
+                <a href="https://secure.anedot.com/phan-west-for-congress/7a2ad324-a724-4885-9b8d-a718a9fdc806"
+                   class="donation-btn donation-btn-gold"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Custom Amount
+                </a>
+            </div>
+
+            <!-- FEC disclaimer -->
+            <div class="banner-disclaimer">
+                <p>
+                    Paid for by Amy Phan West for Congress | FEC ID: Pending
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content Wrapper (gets margin-top when banner reveals) -->
+    <div id="contentWrapper" class="content-wrapper">
+
+    <!-- Patriotic Stripe -->
+    <div class="patriotic-stripe"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="apwnewlogo.png" alt="Amy Phan West for Congress" class="logo">
+            </div>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="/" class="nav-link active">Home</a></li>
+                <li><a href="/about.html" class="nav-link">About Amy</a></li>
+                <li><a href="/issues.html" class="nav-link">Issues</a></li>
+                <li><a href="/events.html" class="nav-link">Events</a></li>
+                <li><a href="mailto:info@amyphanwest.com?subject=Campaign%20Inquiry" class="nav-link">Contact</a></li>
+                <li><a href="https://secure.anedot.com/phan-west-for-congress/7a2ad324-a724-4885-9b8d-a718a9fdc806" target="_blank" class="btn btn-primary nav-cta">Donate</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Patriotic Stripe -->
+    <div class="patriotic-stripe"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- YouTube Video Background -->
+        <div class="video-bg-container">
+            <iframe
+                class="video-bg"
+                src="https://www.youtube.com/embed/Fqy3x9uVCQU?autoplay=1&mute=1&loop=1&playlist=Fqy3x9uVCQU&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1"
+                frameborder="0"
+                allow="autoplay; encrypted-media"
+                allowfullscreen
+            ></iframe>
+        </div>
+        <!-- Gradient Overlay -->
+        <div class="video-gradient-overlay"></div>
+
+        <div class="hero-container">
+            <div class="container">
+                <div class="hero-layout">
+                    <!-- Left Side: Amy's Photo -->
+                    <div class="hero-image-side">
+                        <picture>
+                            <source srcset="assets/GemiAPW.png" media="(max-width: 768px)">
+                            <img src="assets/amy-transparentf.png" alt="Amy Phan West" class="hero-amy">
+                        </picture>
+                    </div>
+
+                    <!-- Right Side: Content -->
+                    <div class="hero-content">
+                        <img src="apwnewlogo.png" alt="Amy Phan West for Congress" class="hero-logo">
+
+                        <!-- FIXED CONTENT (Never Changes) -->
+                        <div class="hero-fixed">
+                            <h1 class="hero-title">
+                                Orange County Is Winnable—And I Know How to Win Close Races
+                            </h1>
+                            <p class="hero-tagline">From Refugee to Fighter</p>
+
+                            <p class="hero-description">
+                                I won my City Council seat by 21 votes. Not through luck—through relentless voter outreach,
+                                door-to-door campaigning, and earning every single vote. I fled communist Vietnam at age 5.
+                                Built a business from nothing. Now I'm running for Congress to defend the freedoms
+                                my family risked everything to reach.
+                            </p>
+                        </div>
+
+                        <!-- VARIABLE CONTENT (Updates when Prop 50 resolves) -->
+                        <div class="hero-variable" data-last-updated="2025-11-19">
+                            <p class="hero-description" id="district-context">
+                                Orange County is winnable. With a strategic voter registration drive and community mobilization,
+                                we can secure this seat. The Vietnamese community alone represents 15-20% of Orange County—
+                                a redistricting-proof advantage no matter how the boundaries shift.
+                            </p>
+                        </div>
+
+                        <div class="hero-cta">
+                            <a href="https://secure.anedot.com/phan-west-for-congress/7a2ad324-a724-4885-9b8d-a718a9fdc806" target="_blank" class="btn btn-primary btn-large">
+                                Join the Movement
+                            </a>
+                            <a href="/about.html" class="btn btn-secondary btn-large">
+                                Meet Amy
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-scroll">
+            <a href="#why-amy" class="scroll-indicator">
+                <span>Learn More</span>
+                <svg class="scroll-arrow" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Signup Form Section -->
+    <section class="form-section-overlay">
+        <form class="signup-form" id="signupForm" novalidate>
+            <!-- Row 1: Form Fields -->
+            <div class="form-fields-row">
+                <div class="form-group">
+                    <input
+                        type="text"
+                        id="firstName"
+                        name="firstName"
+                        placeholder="First Name"
+                        required
+                        aria-required="true"
+                        aria-label="First Name"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <input
+                        type="text"
+                        id="lastName"
+                        name="lastName"
+                        placeholder="Last Name"
+                        required
+                        aria-required="true"
+                        aria-label="Last Name"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Phone"
+                        aria-label="Phone Number"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Email"
+                        required
+                        aria-required="true"
+                        aria-label="Email Address"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <input
+                        type="text"
+                        id="zipCode"
+                        name="zipCode"
+                        placeholder="ZIP"
+                        pattern="[0-9]{5}"
+                        maxlength="5"
+                        required
+                        aria-required="true"
+                        aria-label="ZIP Code"
+                    >
+                </div>
+            </div>
+
+            <!-- Row 2: Consent & Submit -->
+            <div class="form-bottom-row">
+                <div class="consent-container">
+                    <input
+                        type="checkbox"
+                        id="consent"
+                        name="consent"
+                        class="consent-checkbox"
+                        required
+                    >
+                    <label for="consent" class="consent-label">
+                        By providing your cell phone and checking the box, you consent to receive campaign updates via calls and texts, including automated calls and texts with notifications
+                        from Amy Phan West for Congress. Texts may include donation requests, voter information, or event invitations. At any time, you may discontinue by replying STOP and request
+                        assistance by replying HELP. Message frequency may vary. Message and data rates may apply. See our <a href="/privacy.html">Privacy Policy</a>.
+                    </label>
+                </div>
+
+                <button type="submit" class="submit-button" id="submitBtn">
+                    FIGHT FOR FREEDOM
+                </button>
+            </div>
+        </form>
+
+        <!-- Success Message -->
+        <div class="success-message" id="successMessage">
+            Thank you for joining Team Amy! We'll be in touch soon.
+        </div>
+    </section>
+
+    <!-- Why Amy Section -->
+    <section class="section section-light" id="why-amy">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Why Amy Phan West</h2>
+                <p class="section-subtitle">Not just another politician. Living proof the American Dream works.</p>
+            </div>
+
+            <div class="value-grid">
+                <div class="value-card">
+                    <div class="value-icon">🚢</div>
+                    <h3 class="value-title">Refugee Experience</h3>
+                    <p class="value-text">
+                        Fled communist Vietnam at age 5. I remember living under that regime.
+                        Spent 30 months in refugee camps. Arrived in America with $20.
+                        I don't just talk about freedom—I lived without it.
+                    </p>
+                    <a href="/about.html#journey" class="value-link">Read her story →</a>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">🏢</div>
+                    <h3 class="value-title">Business Owner</h3>
+                    <p class="value-text">
+                        Built successful car rental business from scratch. Created jobs.
+                        Understands regulatory burden firsthand. Proven I can build things.
+                    </p>
+                    <a href="/about.html#business" class="value-link">Learn more →</a>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">🏛️</div>
+                    <h3 class="value-title">Local Leader</h3>
+                    <p class="value-text">
+                        Elected Westminster City Councilwoman in 2022 by just 21 votes.
+                        Fighting for working families every day. Results over rhetoric.
+                    </p>
+                    <a href="/about.html#westminster" class="value-link">See achievements →</a>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">⚔️</div>
+                    <h3 class="value-title">Fighter for You</h3>
+                    <p class="value-text">
+                        Called out communist propaganda—they called me MAGA.
+                        Stood alone when others stayed silent. I say what needs to be said.
+                    </p>
+                    <a href="/about.html#values" class="value-link">Why she fights →</a>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">🇺🇸</div>
+                    <h3 class="value-title">Community Voice</h3>
+                    <p class="value-text">
+                        Representing Orange County's Vietnamese American community—
+                        the largest in the nation. Understanding the immigrant experience firsthand.
+                    </p>
+                    <a href="/about.html" class="value-link">Her background →</a>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">💪</div>
+                    <h3 class="value-title">Proven Results</h3>
+                    <p class="value-text">
+                        Track record of delivering for constituents. Fighting for lower taxes,
+                        safer streets, and government accountability. Not just promises—results.
+                    </p>
+                    <a href="/about.html#westminster" class="value-link">See her record →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What I'll Fight For -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">What I'll Fight For in Congress</h2>
+                <p class="section-subtitle">Real solutions for working families in Orange County.</p>
+            </div>
+
+            <div class="value-grid">
+                <div class="value-card">
+                    <div class="value-icon">🇺🇸</div>
+                    <h3 class="value-title">Freedom & Security</h3>
+                    <p class="value-text">
+                        Strong borders, strong communities. I remember fleeing communism—I know what freedom costs.
+                    </p>
+                    <a href="/issues.html#border-security" class="value-link">My plan →</a>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">💼</div>
+                    <h3 class="value-title">Small Business Growth</h3>
+                    <p class="value-text">
+                        Cut red tape and taxes. As a business owner, I know what kills jobs and what creates them.
+                    </p>
+                    <a href="/issues.html#economy" class="value-link">My plan →</a>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">🏫</div>
+                    <h3 class="value-title">Parents' Rights</h3>
+                    <p class="value-text">
+                        Parents—not bureaucrats—should decide their kids' education. Period.
+                    </p>
+                    <a href="/issues.html#education" class="value-link">My plan →</a>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">🏡</div>
+                    <h3 class="value-title">Affordable Housing</h3>
+                    <p class="value-text">
+                        Build more homes, cut permit delays, make the California Dream attainable again.
+                    </p>
+                    <a href="/issues.html#housing" class="value-link">My plan →</a>
+                </div>
+            </div>
+
+            <div class="text-center mt-3">
+                <a href="/issues.html" class="btn btn-secondary btn-large">See Full Platform</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Updates -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Latest Campaign Updates</h2>
+                <a href="/news.html" class="btn btn-secondary">View All Updates</a>
+            </div>
+
+            <div class="updates-grid" id="latestUpdates">
+                <!-- Updates will be loaded dynamically from Mautic RSS -->
+                <div class="update-card">
+                    <img src="/assets/updates/update1.jpg" alt="Campaign Update" class="update-image">
+                    <div class="update-content">
+                        <span class="update-date">October 18, 2025</span>
+                        <h3 class="update-title">Amy Speaks at Little Saigon Community Event</h3>
+                        <p class="update-excerpt">
+                            Over 200 Vietnamese American community members gathered to hear
+                            Amy's vision for preserving our freedoms and defending the American Dream...
+                        </p>
+                        <a href="/news/little-saigon-event.html" class="update-link">Read More →</a>
+                    </div>
+                </div>
+
+                <div class="update-card">
+                    <img src="/assets/updates/update2.jpg" alt="Campaign Update" class="update-image">
+                    <div class="update-content">
+                        <span class="update-date">October 15, 2025</span>
+                        <h3 class="update-title">New Endorsement: Small Business Coalition</h3>
+                        <p class="update-excerpt">
+                            The Orange County Small Business Coalition today endorsed Amy Phan West,
+                            citing her proven track record of supporting job creators...
+                        </p>
+                        <a href="/news/small-business-endorsement.html" class="update-link">Read More →</a>
+                    </div>
+                </div>
+
+                <div class="update-card">
+                    <img src="/assets/updates/update3.jpg" alt="Campaign Update" class="update-image">
+                    <div class="update-content">
+                        <span class="update-date">October 12, 2025</span>
+                        <h3 class="update-title">Why I'm Running: A Message from Amy</h3>
+                        <p class="update-excerpt">
+                            I remember living under communism. I won't stay silent while it creeps into our schools,
+                            our communities, and our government. Here's why I'm running...
+                        </p>
+                        <a href="/news/why-im-running.html" class="update-link">Read More →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Email Signup Inline -->
+            <div class="inline-signup">
+                <h3 class="signup-title">Stay Updated on the Campaign</h3>
+                <p class="signup-text">Get the latest news, event invitations, and ways to help flip CA-45.</p>
+
+                <form class="signup-form" id="inlineSignupForm" onsubmit="handleSignup(event, 'homepage_inline')">
+                    <input type="email" name="email" class="form-input" placeholder="Your email address" required>
+                    <input type="text" name="firstname" class="form-input" placeholder="First name" required>
+                    <input type="text" name="zip" class="form-input" placeholder="ZIP code" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Involved CTAs -->
+    <section class="section section-patriotic">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title text-white">CA-45 Is Winnable</h2>
+                <p class="section-subtitle text-white">
+                    This race will be decided by a razor-thin margin. Your action today matters.
+                </p>
+            </div>
+
+            <div class="cta-grid">
+                <div class="cta-card">
+                    <div class="cta-icon">💰</div>
+                    <h3 class="cta-title">Chip In</h3>
+                    <p class="cta-text">Fund voter outreach, digital ads, and grassroots organizing across Orange County.</p>
+                    <a href="https://secure.anedot.com/phan-west-for-congress/7a2ad324-a724-4885-9b8d-a718a9fdc806" target="_blank" class="btn btn-gold btn-block">Donate</a>
+                </div>
+
+                <div class="cta-card">
+                    <div class="cta-icon">🙋</div>
+                    <h3 class="cta-title">Volunteer</h3>
+                    <p class="cta-text">Phone bank, canvass, or host events. We need boots on the ground.</p>
+                    <a href="mailto:info@amyphanwest.com?subject=Volunteer%20for%20CA-45" class="btn btn-gold btn-block">Sign Up</a>
+                </div>
+
+                <div class="cta-card">
+                    <div class="cta-icon">📅</div>
+                    <h3 class="cta-title">Stay Informed</h3>
+                    <p class="cta-text">Get updates on town halls, endorsements, and campaign milestones.</p>
+                    <a href="#" onclick="document.getElementById('inlineSignupForm').scrollIntoView({behavior: 'smooth'})" class="btn btn-gold btn-block">Subscribe</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-stars">★ ★ ★</div>
+
+            <div class="footer-content">
+                <div class="footer-column">
+                    <img src="apwnewlogo.png" alt="Amy Phan West" class="footer-logo">
+                    <p class="footer-text">
+                        Fighting for the American Dream.<br>
+                        From refugee to your representative.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://facebook.com/amyphanwest" target="_blank" aria-label="Facebook">
+                            <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="https://twitter.com/amyphanwest" target="_blank" aria-label="Twitter">
+                            <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                        <a href="https://instagram.com/amyphanwest" target="_blank" aria-label="Instagram">
+                            <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="/about.html">About Amy</a></li>
+                        <li><a href="/#why-amy">Why Amy</a></li>
+                        <li><a href="https://secure.anedot.com/phan-west-for-congress/7a2ad324-a724-4885-9b8d-a718a9fdc806" target="_blank">Donate</a></li>
+                        <li><a href="mailto:info@amyphanwest.com">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-heading">Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:info@amyphanwest.com?subject=Volunteer">Volunteer</a></li>
+                        <li><a href="https://facebook.com/amyphanwest" target="_blank">Facebook</a></li>
+                        <li><a href="https://twitter.com/amyphanwest" target="_blank">Twitter</a></li>
+                        <li><a href="https://instagram.com/amyphanwest" target="_blank">Instagram</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-heading">Stay Updated</h4>
+                    <form class="footer-signup" onsubmit="handleSignup(event, 'footer')">
+                        <input type="email" name="email" class="footer-input" placeholder="Your email" required>
+                        <button type="submit" class="btn btn-gold btn-sm">Subscribe</button>
+                    </form>
+
+                    <p class="footer-contact">
+                        <strong>Campaign Office:</strong><br>
+                        3843 S. Bristol St. #604<br>
+                        Santa Ana, CA 92704<br>
+                        <a href="mailto:info@amyphanwest.com">info@amyphanwest.com</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-disclaimer">
+                    <p>
+                        <strong>Paid for by Amy Phan West for Congress 2026</strong><br>
+                        FEC ID: Pending | Not authorized by any candidate or candidate's committee.<br>
+                        Contributions are not tax deductible. Federal law requires us to use our best efforts to collect and report the name,
+                        mailing address, occupation and name of employer of individuals whose contributions exceed $200 in an election cycle.
+                    </p>
+                </div>
+
+                <div class="footer-legal">
+                    <a href="/privacy.html">Privacy Policy</a> |
+                    <a href="/terms.html">Terms of Use</a> |
+                    <a href="/accessibility.html">Accessibility</a>
+                </div>
+
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Amy Phan West for Congress. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AI Chatbot Widget -->
+    <div class="chatbot-widget" id="chatbot">
+        <button class="chatbot-button" id="chatbotButton" onclick="toggleChatbot()">
+            <svg class="chatbot-icon" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"/>
+                <path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"/>
+            </svg>
+        </button>
+
+        <div class="chatbot-window" id="chatbotWindow" style="display: none;">
+            <div class="chatbot-header">
+                <div class="chatbot-title">
+                    <img src="/assets/amy-avatar.jpg" alt="Amy" class="chatbot-avatar">
+                    <span>Chat with Amy's AI Assistant</span>
+                </div>
+                <button class="chatbot-close" onclick="toggleChatbot()">×</button>
+            </div>
+
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="chatbot-message bot-message">
+                    <p>Hi! I'm Amy's AI assistant. I can help you learn about her story, positions on issues, and how you can get involved. What would you like to know?</p>
+                </div>
+            </div>
+
+            <form class="chatbot-input-form" onsubmit="sendChatMessage(event)">
+                <input type="text" id="chatbotInput" class="chatbot-input" placeholder="Ask me anything..." required>
+                <button type="submit" class="chatbot-send">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal for Video & Signup -->
+    <div class="modal" id="modal" style="display: none;">
+        <div class="modal-overlay" onclick="closeModal()"></div>
+        <div class="modal-content" id="modalContent">
+            <!-- Content loaded dynamically -->
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/js/main.js"></script>
+
+    <!-- Exit Intent Script -->
+    <script>
+        let exitIntentShown = false;
+        document.addEventListener('mouseleave', function(e) {
+            if (e.clientY < 50 && !exitIntentShown) {
+                exitIntentShown = true;
+                showExitIntent();
+            }
+        });
+
+        function showExitIntent() {
+            // Show exit intent popup
+            const modal = document.getElementById('modal');
+            const modalContent = document.getElementById('modalContent');
+
+            modalContent.innerHTML = `
+                <div class="exit-intent">
+                    <h2>Before You Go...</h2>
+                    <p>Join 2,800+ supporters who are fighting to flip CA-45. Get updates on the campaign and ways to help.</p>
+                    <form onsubmit="handleSignup(event, 'exit_intent')">
+                        <input type="email" name="email" class="form-input" placeholder="Your email" required>
+                        <input type="text" name="firstname" class="form-input" placeholder="First name" required>
+                        <button type="submit" class="btn btn-primary btn-block">Join the Fight</button>
+                    </form>
+                    <button class="text-link" onclick="closeModal()">No thanks, I'll miss this opportunity</button>
+                </div>
+            `;
+
+            modal.style.display = 'flex';
+
+            mt('send', 'event', 'exit_intent_shown');
+        }
+    </script>
+
+    </div>
+    <!-- End Content Wrapper -->
+
+    <!-- Donation Banner JavaScript -->
+    <script>
+        // Get DOM elements
+        const banner = document.getElementById('donationBanner');
+        const contentWrapper = document.getElementById('contentWrapper');
+        const closeBtn = document.getElementById('bannerCloseBtn');
+
+        // Calculate banner height to set content margin
+        function updateContentMargin() {
+            const bannerHeight = banner.offsetHeight;
+            contentWrapper.style.marginTop = `${bannerHeight}px`;
+        }
+
+        // Reveal banner after 3 seconds
+        setTimeout(() => {
+            banner.classList.add('revealed');
+            updateContentMargin();
+
+            // Track banner reveal event in Mautic
+            if (typeof mt !== 'undefined') {
+                mt('send', 'event', 'donation_banner_shown', {
+                    page: 'homepage',
+                    tags: ['banner_engagement']
+                });
+            }
+        }, 3000);
+
+        // Close button functionality
+        closeBtn.addEventListener('click', () => {
+            banner.classList.remove('revealed');
+            contentWrapper.style.marginTop = '0';
+
+            // Track banner close event in Mautic
+            if (typeof mt !== 'undefined') {
+                mt('send', 'event', 'donation_banner_closed', {
+                    page: 'homepage',
+                    tags: ['banner_engagement']
+                });
+            }
+        });
+
+        // Handle window resize to recalculate margin
+        let resizeTimeout;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+                if (banner.classList.contains('revealed')) {
+                    updateContentMargin();
+                }
+            }, 100);
+        });
+    </script>
+
+    <!-- Signup Form Validation JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('signupForm');
+            if (!form) return;  // Exit if form doesn't exist
+
+            const submitBtn = document.getElementById('submitBtn');
+            const successMessage = document.getElementById('successMessage');
+
+            // Phone number formatting to (XXX) XXX-XXXX
+            const phoneInput = document.getElementById('phone');
+            if (phoneInput) {
+                phoneInput.addEventListener('input', function(e) {
+                    let value = e.target.value.replace(/\D/g, '');
+                    let formattedValue = '';
+
+                    if (value.length > 0) {
+                        formattedValue = '(' + value.substring(0, 3);
+                    }
+                    if (value.length > 3) {
+                        formattedValue += ') ' + value.substring(3, 6);
+                    }
+                    if (value.length > 6) {
+                        formattedValue += '-' + value.substring(6, 10);
+                    }
+
+                    e.target.value = formattedValue;
+                });
+            }
+
+            // ZIP code input restriction (numbers only, max 5)
+            const zipInput = document.getElementById('zipCode');
+            if (zipInput) {
+                zipInput.addEventListener('input', function(e) {
+                    e.target.value = e.target.value.replace(/\D/g, '').substring(0, 5);
+                });
+            }
+
+            // Form submission
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+
+                // Validate form
+                let isValid = true;
+
+                const firstName = document.getElementById('firstName');
+                const lastName = document.getElementById('lastName');
+                const email = document.getElementById('email');
+                const zipCode = document.getElementById('zipCode');
+                const phone = document.getElementById('phone');
+                const consent = document.getElementById('consent');
+
+                // First Name validation
+                if (!firstName.value.trim()) {
+                    isValid = false;
+                    alert('Please enter your first name');
+                    firstName.focus();
+                    return;
+                }
+
+                // Last Name validation
+                if (!lastName.value.trim()) {
+                    isValid = false;
+                    alert('Please enter your last name');
+                    lastName.focus();
+                    return;
+                }
+
+                // Email validation
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!email.value.trim() || !emailRegex.test(email.value)) {
+                    isValid = false;
+                    alert('Please enter a valid email address');
+                    email.focus();
+                    return;
+                }
+
+                // ZIP Code validation
+                const zipRegex = /^\d{5}$/;
+                if (!zipCode.value.trim() || !zipRegex.test(zipCode.value)) {
+                    isValid = false;
+                    alert('Please enter a valid 5-digit ZIP code');
+                    zipCode.focus();
+                    return;
+                }
+
+                // Phone validation (optional but validate format if provided)
+                if (phone.value) {
+                    const phoneDigits = phone.value.replace(/\D/g, '');
+                    if (phoneDigits.length !== 10) {
+                        isValid = false;
+                        alert('Please enter a valid 10-digit phone number');
+                        phone.focus();
+                        return;
+                    }
+                }
+
+                // Consent checkbox validation
+                if (!consent.checked) {
+                    alert('Please check the consent box to continue');
+                    isValid = false;
+                    return;
+                }
+
+                if (!isValid) {
+                    return;
+                }
+
+                // Show loading state
+                submitBtn.classList.add('loading');
+                submitBtn.textContent = 'SUBMITTING...';
+
+                // Track form submission attempt in Mautic
+                if (typeof mt !== 'undefined') {
+                    mt('send', 'event', 'hero_form_submit', {
+                        page: 'homepage',
+                        tags: ['form_engagement', 'high_intent', 'hero_signup']
+                    });
+                }
+
+                // Here you would normally submit to your backend/Mautic
+                // For now, simulating submission
+                try {
+                    await new Promise(resolve => setTimeout(resolve, 1500));
+
+                    // Show success message
+                    successMessage.classList.add('show');
+                    form.reset();
+
+                    // Track successful submission in Mautic
+                    if (typeof mt !== 'undefined') {
+                        mt('send', 'conversion', {
+                            email: email.value,
+                            action: 'hero_signup_complete',
+                            tags: ['new_signup', 'homepage_hero_form']
+                        });
+                    }
+
+                    // Reset button
+                    submitBtn.classList.remove('loading');
+                    submitBtn.textContent = 'FIGHT FOR FREEDOM';
+
+                    // Hide success message after 5 seconds
+                    setTimeout(() => {
+                        successMessage.classList.remove('show');
+                    }, 5000);
+
+                } catch (error) {
+                    console.error('Submission error:', error);
+                    alert('There was an error submitting your information. Please try again.');
+                    submitBtn.classList.remove('loading');
+                    submitBtn.textContent = 'FIGHT FOR FREEDOM';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
