@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Variation 3.1 - Video Flag Background (Headshot Left)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-red: #C8102E;
+            --color-blue: #3657A6;
+            --color-gold: #F4EA00;
+            --color-dark: #1A1A1A;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            background: #000;
+        }
+
+        .hero-stage {
+            position: relative;
+            width: 100vw;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        /* Layer 1: Video Background with Distance Blur */
+        .video-bg-container {
+            position: absolute;
+            top: -80px;
+            left: -80px;
+            right: -80px;
+            bottom: -80px;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .video-bg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 180%;
+            height: 180%;
+            transform: translate(-50%, -50%) scale(1.15);
+            filter: blur(28px) brightness(0.5) contrast(1.1);
+            pointer-events: none;
+            will-change: transform;
+        }
+
+        /* Layer 2: Multi-Gradient Overlay with Moderate Blur */
+        .gradient-depth {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 70% 50%,
+                    rgba(56, 87, 166, 0.9) 0%,
+                    transparent 60%),
+                radial-gradient(ellipse at 30% 50%,
+                    rgba(200, 16, 46, 0.8) 0%,
+                    transparent 60%),
+                linear-gradient(180deg,
+                    rgba(0, 0, 0, 0.4) 0%,
+                    rgba(0, 0, 0, 0.2) 50%,
+                    rgba(0, 0, 0, 0.6) 100%);
+            backdrop-filter: blur(14px);
+            z-index: 2;
+        }
+
+        /* Layer 3: Content Grid - REVERSED: Headshot Left, Content Right */
+        .content-grid {
+            position: relative;
+            z-index: 3;
+            max-width: 1600px;
+            width: 100%;
+            padding: 80px 64px;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        /* Layer 4: Cinematic Headshot - NOW ON LEFT */
+        .cinematic-headshot {
+            position: relative;
+            z-index: 4;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .headshot-frame {
+            position: relative;
+        }
+
+        .headshot-img {
+            width: 100%;
+            max-width: 560px;
+            height: auto;
+            filter: drop-shadow(0 40px 80px rgba(0, 0, 0, 0.8))
+                    drop-shadow(0 20px 40px rgba(0, 0, 0, 0.6))
+                    drop-shadow(0 0 60px rgba(56, 87, 166, 0.3));
+            transform: scale(1.25) translateX(-32px);
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .headshot-img:hover {
+            transform: scale(1.3) translateX(-32px) translateY(-12px);
+            filter: drop-shadow(0 50px 100px rgba(0, 0, 0, 0.9))
+                    drop-shadow(0 25px 50px rgba(0, 0, 0, 0.7))
+                    drop-shadow(0 0 80px rgba(56, 87, 166, 0.5));
+        }
+
+        /* Accent Glow Behind Headshot */
+        .glow-accent {
+            position: absolute;
+            inset: -40px;
+            background: radial-gradient(
+                circle at center,
+                rgba(244, 234, 0, 0.15) 0%,
+                transparent 70%
+            );
+            z-index: -1;
+            animation: pulse-glow 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 0.8; }
+        }
+
+        /* Content Area - NOW ON RIGHT */
+        .hero-content {
+            color: white;
+        }
+
+        .brand-logo {
+            width: 300px;
+            height: auto;
+            margin-bottom: 40px;
+            filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.5))
+                    brightness(1.15);
+        }
+
+        .headline-primary {
+            font-family: 'Playfair Display', serif;
+            font-size: 56px;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            background: linear-gradient(
+                135deg,
+                #ffffff 0%,
+                rgba(255, 255, 255, 0.9) 50%,
+                var(--color-gold) 100%
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: none;
+            filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.8));
+        }
+
+        .headline-accent {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--color-gold);
+            margin-bottom: 32px;
+            text-shadow: 0 4px 12px rgba(0, 0, 0, 0.8),
+                         0 0 40px rgba(244, 234, 0, 0.3);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .description-para {
+            font-size: 19px;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 48px;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+            max-width: 640px;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .hero-btn {
+            padding: 20px 48px;
+            font-size: 19px;
+            font-weight: 700;
+            border-radius: 14px;
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-btn::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                135deg,
+                rgba(255, 255, 255, 0.1) 0%,
+                transparent 100%
+            );
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        .hero-btn:hover::before {
+            opacity: 1;
+        }
+
+        .btn-join {
+            background: linear-gradient(
+                135deg,
+                var(--color-red) 0%,
+                #a00d25 50%,
+                var(--color-red) 100%
+            );
+            background-size: 200% 100%;
+            color: white;
+            border: 2px solid var(--color-red);
+        }
+
+        .btn-join:hover {
+            background-position: 100% 0;
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 20px 40px rgba(200, 16, 46, 0.6),
+                        0 0 60px rgba(200, 16, 46, 0.4);
+        }
+
+        .btn-learn {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(20px);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .btn-learn:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: white;
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 20px 40px rgba(255, 255, 255, 0.3);
+        }
+
+        /* Scroll Prompt */
+        .scroll-prompt {
+            position: absolute;
+            bottom: 56px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 5;
+            text-align: center;
+        }
+
+        .scroll-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+            animation: drift 3.5s ease-in-out infinite;
+        }
+
+        @keyframes drift {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-16px);
+            }
+        }
+
+        .scroll-icon {
+            width: 32px;
+            height: 32px;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.6));
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 1200px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 56px;
+                padding: 64px 48px;
+            }
+
+            .cinematic-headshot {
+                order: -1;
+                justify-content: center;
+            }
+
+            .headshot-img {
+                transform: scale(1.1) translateX(0);
+                max-width: 450px;
+            }
+
+            .headline-primary {
+                font-size: 44px;
+            }
+
+            .headline-accent {
+                font-size: 26px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                padding: 48px 32px;
+                gap: 40px;
+            }
+
+            .brand-logo {
+                width: 220px;
+            }
+
+            .headline-primary {
+                font-size: 34px;
+            }
+
+            .headline-accent {
+                font-size: 22px;
+            }
+
+            .description-para {
+                font-size: 17px;
+            }
+
+            .headshot-img {
+                max-width: 360px;
+            }
+
+            .cta-group {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .hero-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .content-grid {
+                padding: 40px 24px;
+            }
+
+            .headline-primary {
+                font-size: 28px;
+            }
+
+            .headline-accent {
+                font-size: 18px;
+            }
+
+            .description-para {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero-stage">
+        <!-- Layer 1: YouTube Video Background with Distance Blur -->
+        <div class="video-bg-container">
+            <iframe
+                class="video-bg"
+                src="https://www.youtube.com/embed/Fqy3x9uVCQU?autoplay=1&mute=1&loop=1&playlist=Fqy3x9uVCQU&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1"
+                frameborder="0"
+                allow="autoplay; encrypted-media"
+                allowfullscreen
+            ></iframe>
+        </div>
+
+        <!-- Layer 2: Multi-Gradient Depth Overlay -->
+        <div class="gradient-depth"></div>
+
+        <!-- Layer 3 & 4: Content Grid - HEADSHOT LEFT, CONTENT RIGHT -->
+        <div class="content-grid">
+            <!-- Layer 4: Cinematic Headshot - LEFT SIDE -->
+            <div class="cinematic-headshot">
+                <div class="headshot-frame">
+                    <div class="glow-accent"></div>
+                    <img
+                        src="./amy-transparentf.png"
+                        alt="Amy Phan West - Candidate for Congress CA-45"
+                        class="headshot-img"
+                    >
+                </div>
+            </div>
+
+            <!-- Hero Content - RIGHT SIDE -->
+            <div class="hero-content">
+                <img
+                    src="./apwnewlogo.png"
+                    alt="Amy Phan West for Congress"
+                    class="brand-logo"
+                >
+
+                <h1 class="headline-primary">
+                    Orange County Is Winnable—And I Know How to Win Close Races
+                </h1>
+
+                <p class="headline-accent">From Refugee to Fighter</p>
+
+                <p class="description-para">
+                    I won my City Council seat by 21 votes. Not through luck—through relentless voter outreach,
+                    door-to-door campaigning, and earning every single vote. I fled communist Vietnam at age 5.
+                    Built a business from nothing. Now I'm running for Congress to defend the freedoms
+                    my family risked everything to reach.
+                </p>
+
+                <div class="cta-group">
+                    <a href="#join" class="hero-btn btn-join">
+                        <span>Join the Movement</span>
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </a>
+                    <a href="#about" class="hero-btn btn-learn">
+                        <span>Meet Amy</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Prompt -->
+        <div class="scroll-prompt">
+            <a href="#continue" class="scroll-btn">
+                <span>Discover More</span>
+                <svg class="scroll-icon" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+</body>
+</html>
