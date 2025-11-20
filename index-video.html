@@ -65,16 +65,10 @@
             position: absolute;
             inset: 0;
             background:
-                radial-gradient(ellipse at 70% 50%,
-                    rgba(56, 87, 166, 0.3) 0%,
-                    transparent 60%),
-                radial-gradient(ellipse at 30% 50%,
-                    rgba(200, 16, 46, 0.25) 0%,
-                    transparent 60%),
                 linear-gradient(180deg,
-                    rgba(0, 0, 0, 0.2) 0%,
-                    rgba(0, 0, 0, 0.1) 50%,
-                    rgba(0, 0, 0, 0.3) 100%);
+                    rgba(0, 0, 0, 0.15) 0%,
+                    rgba(0, 0, 0, 0.05) 50%,
+                    rgba(0, 0, 0, 0.2) 100%);
             z-index: 1;
         }
 
@@ -196,6 +190,7 @@
         <!-- YouTube Video Background -->
         <div class="video-bg-container">
             <iframe
+                id="hero-video"
                 class="video-bg"
                 src="https://www.youtube.com/embed/Fqy3x9uVCQU?autoplay=1&mute=1&loop=1&playlist=Fqy3x9uVCQU&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1"
                 frameborder="0"
@@ -203,6 +198,24 @@
                 allowfullscreen
             ></iframe>
         </div>
+        <script>
+            // YouTube IFrame API for playback speed control
+            var tag = document.createElement('script');
+            tag.src = "https://www.youtube.com/iframe_api";
+            var firstScriptTag = document.getElementsByTagName('script')[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+            var player;
+            function onYouTubeIframeAPIReady() {
+                player = new YT.Player('hero-video', {
+                    events: {
+                        'onReady': function(event) {
+                            event.target.setPlaybackRate(0.5);
+                        }
+                    }
+                });
+            }
+        </script>
         <!-- Gradient Overlay -->
         <div class="video-gradient-overlay"></div>
 
